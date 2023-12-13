@@ -1,0 +1,48 @@
+The Missing People Insident
+
+::The Breafing
+You enter the police stasion in the morning. The boss, Ruby, has called you in extra early because of a case that is being moved to your division. She whantd you to lead the team, it is your chanse to make not just you recogniced but the entire Paranormal division. Walkin into the room, Roby is already flipping thru a stack of pappers and your three other colegas are seated at the table.
+[Sit down quietly](Quiely Sitt)
+[Ask about the situasion](Ask for Breafing)
+[Greet your colegas](Greetings!)<Points:2>
+
+::Quiely Sitt
+Ruby lookes opp at you from the stack of papir, her red eyes look judingly at you before she starts talking monotonly. "As you may be aware of, over the passed year there have been a few disaperenses. Now rufly half of them have returned on their own, but close friends and family are conserned for them as they have displayed change in behavior after returning. And two of them have been found dead, but dissapered in the same fasion".  She plasses a folder of 6 raports in front of you, eatch one with one missiong person.
+[Look at the cases](Cases)
+
+::Ask for Breafing
+"As you may be aware of, over the passed year there have been a few disaperenses. Now rufly half of them have returned on their own, but close friends and family are conserned for them as they have displayed change in behavior after returning. And two of them have been found dead, but dissapered in the same fasion".  She plasses a folder of 6 raports in front of you, eatch one with one missiong person.
+[Look at the cases](Cases)
+
+::Greetings!
+"Good mornign to you too!" Rin the new inturn happily greets back. "Morning" Arleyna states, "we vil find out if it is a good one in dew time". The last one on the team is one of the police automatic robot that follow along to document insidents, sould they arise. Before you get a convorsasion going, Ruby gets you attension and signals to the papers in her hand. "As you may be aware of, over the passed year there have been a few disaperenses. Now rufly half of them have returned on their own, but close friends and family are conserned for them as they have displayed change in behavior after returning. And two of them have been found dead, but dissapered in the same fasion".  She plasses a folder of 6 raports in front of you, eatch one with one missiong person.
+[Look at the cases](Cases)
+
+::Eliot Backgrovnd informaion
+Eliot Ankelshire does not show up on any survalient camera in the period between november 25 and desember 4. his health records show a decrise in health and that he had perskription on heart medicasion. Further information is writhen in his jurnal.
+[back To Files](Eliot Missing)
+
+::Eliot Conclusion
+Eliot Ankelshires body was found in Calimar River desember 4 2021. the atopsy show a lak of water in his lungs and conkluding that the body was dead before entering the river. Date of death is aproksomatly desember 1. The cause of death is unknown. The speak with dead spell does not work. Eliot Ankelshires body went missing from the camitery bofore it could be baried. The bodywhereabouts are curently unknown.
+[back To Files](Eliot Missing)
+
+::Eliot Missing
+Look thru his dokuments.
+[Summery](Eliot Summery)
+[Backgrovnd informaion](Eliot Backgrovnd informaion)
+[Conclusion](Eliot Conclusion)
+[Go Back To other cases](Cases)
+
+::Cases
+Whitch one to look at.
+[Eliot](Eliot Missing)
+[Amanda](Amanda Missing)
+[Demitri](Demitri Missing)
+[Morgan](Morgan Missing)
+[Vealka](Vealka Missing)
+[Camomile](Camomile Missing)
+
+::Eliot Summery
+Eliot Ankelshire, reported missing by his sister Steffani Ankelshire. She found him missing from his home november 25, she visits quite  freqent and ladst saw him about 5 days ago. Him imployer informs that he was last seen at work friday november 20. Nither his family nor enployer have been informed about him leaving. Steffani informs that Eliot was a law abieing citysen but had some drinking problems and had a tight budget. His heart problems make it un rsonebol for him to leave the city as he needs to go to reglar health chekups.
+[back To Files](Eliot Missing)
+

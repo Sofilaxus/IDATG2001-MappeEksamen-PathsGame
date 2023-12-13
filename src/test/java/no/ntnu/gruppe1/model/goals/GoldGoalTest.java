@@ -1,0 +1,92 @@
+package no.ntnu.gruppe1.model.goals;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import no.ntnu.gruppe1.model.goals.Goal;
+import no.ntnu.gruppe1.model.goals.GoalFactory;
+import no.ntnu.gruppe1.model.player.Player;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+/**
+ * Class for testing the GoldGoal class.
+ *
+ * @author Marie Skamsar Aasen and Sofia Serine Mikkelsen
+ * @version 23.02.2023
+ */
+
+class GoldGoalTest {
+  private Goal<?> goal;
+  private Player testPlayer;
+
+  /**
+   * Creates objects and assigns standard values for testing.
+   */
+  @BeforeEach
+  void setUp() {
+    goal = GoalFactory.getGoalFactory().createGoal("GoldGoal", "10");
+    testPlayer = new Player.PlayerBuilder("Marie")
+        .setHealth(21)
+        .setGold(10)
+        .setScore(17)
+        .setItem("rusty sword")
+        .build();
+  }
+
+  /**
+   * Test for when the goal is an invalid number
+   */
+  @Test
+  void newGoldGoal() {
+
+    IllegalArgumentException madeGoal =
+        assertThrows(IllegalArgumentException.class, () ->
+            goal = GoalFactory.getGoalFactory().createGoal("GoldGoal", "-1"));
+    assertEquals(
+        "value of gold Goal invalid The goal value can not be negative, the player can not reach it",
+        madeGoal.getMessage());
+  }
+
+  /**
+   * Tests for when the player has 10 gold and the minimum is 10 gold.
+   */
+  @Test
+  void testIsFulfilled() {
+    assertTrue(goal.isFulfilled(testPlayer));
+  }
+
+  /**
+   * Tests for when the player has 11 gold and the minimum is 10 gold.
+   */
+  @Test
+  void testIsOverFulfilled() {
+    testPlayer.addGold(1);
+    assertTrue(goal.isFulfilled(testPlayer));
+  }
+
+  /**
+   * Tests for when the player has 9 gold and the minimum is 10 gold.
+   */
+  @Test
+  void testIsUnderFulfilled() {
+    testPlayer.addGold(-1);
+    assertFalse(goal.isFulfilled(testPlayer));
+  }
+
+  /**
+   * Test for when there is no player to test the goal.
+   */
+  @Test
+  void testPlayerNull() {
+    assertThrows(NullPointerException.class, () ->
+        goal.isFulfilled(null));
+  }
+
+  /**
+   * Test for getting the goalValue.
+   */
+  @Test
+  void testGetFulfillmentCriteria() {
+    assertEquals(10, goal.getFulfillmentCriteria());
+  }
+}

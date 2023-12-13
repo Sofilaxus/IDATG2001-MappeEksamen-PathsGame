@@ -1,0 +1,11 @@
+Haunted House
+[Try to open the door  ] (Another room)<HEALTH:-2>
+You are in a small, dimly lit room. There is a door in front of you.
+::Beginnings
+
+::Another room
+[Open the book] ( The book of spells )  <item:book> <Gold : 2>  <PoiNtS:5 >
+The door opens to another room.
+[Go back](Beginnings)
+You see a desk with a large, dusty book.
+

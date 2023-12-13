@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>no.ntnu.gruppe1</groupId>
+    <artifactId>MappeReprository</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Maven plugin versions -->
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
+        <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
+        <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
+        <javafx-maven-plugin.version>0.0.8</javafx-maven-plugin.version>
+        <jpackage-maven-plugin.version>1.4.0</jpackage-maven-plugin.version>
+
+        <!-- Dependencies -->
+        <junit-jupiter.version>5.9.2</junit-jupiter.version>
+        <javafx.version>17.0.2</javafx.version>
+        <controlsfx.version>11.1.2</controlsfx.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>20-ea+9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>19.0.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>${controlsfx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <!--
+                        https://git.gvk.idi.ntnu.no/course/idatg2001/idatg2001-2023-ws/eyram/gruppe1/mappe1/-/blob/main/src/main/java/Main.java
+                    -->
+                    <mainClass>no.ntnu.gruppe1.Main</mainClass>
+                </configuration>
+            </plugin>
+            <!--
+                Surefire is the test-plugin for Maven. Surefire will use whatever
+                test engine (JUnit4, JUnit5, TestNG etc) added as dependency
+                to the project.
+                The default version of surefire that comes bundled with maven is 2.12.4.
+                This version only supports up to JUnit4.
+                Hence to be able to run JUnit 5 tests, we need to add a newer version of
+                the Surefire plugin, like 3.0.0-M5
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+            <!--
+            This plugin creates what is called an "Uber-jar", which is a single JAR-file that incorporates
+            all the JAR-files that this project depends on. This way, you can distribute this single
+            JAR-file to the "customer", and it should be possible for the customer to just double-click the
+            JAR-file to run the application-
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
+                            <finalName>Paths</finalName>
+                            <transformers>
+                                <transformer implementation=
+                                                     "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <!--
+                                        https://git.gvk.idi.ntnu.no/course/idatg2001/idatg2001-2023-ws/eyram/gruppe1/mappe1/-/blob/main/src/main/java/Main.java
+                                    -->
+                                    <mainClass>no.ntnu.gruppe1.Main</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- As averything else in Maven, a Plugin is also uniquely identified by its coordinates -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <!-- configure how to execute this plugin -->
+                <executions>
+                    <execution>
+                        <!--
+                            connect the execution of the plugin to the Maven lifecycle phase "package"
+                            so that JavaDoc is generated every time you run "mvn package"
+                        -->
+                        <phase>package</phase>
+                        <id>attach-javadocs</id>
+                        <!--
+                            set which of the no.ntnu.gruppe1.goals in the plugin to execute. The JavaDoc plugin
+                            has a total of 16 no.ntnu.gruppe1.goals to choose from. See: https://maven.apache.org/plugins/maven-javadoc-plugin/
+                            The most common once beeing either "javadoc" or "jar"
+                        -->
+                        <goals>
+                            <goal>javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- generate javadoc only for public classes and members -->
+                    <show>public</show>
+                    <!-- Omits the HELP link in the navigation bars at the top and bottom of each page of output. -->
+                    <nohelp>true</nohelp>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>no.ntnu.gruppe1.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
+

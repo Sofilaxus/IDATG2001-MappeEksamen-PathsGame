@@ -1,0 +1,206 @@
+The Mystery of The Troll Attack
+
+::Beginnings
+It is a nice and sunny day today. What do you want to do?
+[Go to the village](Village)
+[Stay inside](Home)
+
+::Home
+You are now hungry. Oh no, you don't have any food! What should you do?
+[Stay hungry](Stomach ache) <Health:-1>
+[Go to the village and buy food](Village)
+
+::Stomach ache
+Your stomach is growling angrily and it hurts! You need food!
+[Go to the village](Village)
+
+::Village
+Do you want to bring some money to the village, just in case?
+[Bring money](In the village) <Gold:20>
+[Leave the money at home](In the village)
+
+::In the village
+You go to the first shop you see. There are so many weird items here! What should you buy?
+[Bread - 1 gold](Bread) <Gold:-1> <Health:1> <Points:2>
+[Mysterious key - 20 gold](Mysterious key) <Gold:-20> <Item:Mysterious key> <Points:100>
+[Tomato plant seeds - 3 gold](Tomato plant) <Gold:-3> <Item:tomato plant seeds> <Points:1>
+[Mysterious sword - 4 gold](Bad sword) <Gold:-4> <Item:Horrible sword> <Points:1>
+
+::Bread
+Ahh, just what you needed. You ate the bread as soon as you bought it! Suddenly, you hear people scream behind you!
+[Turn around and see what is happening](Troll)
+[Run and hide](Troll attack)
+
+::Mysterious key
+Oh, interesting. What could this key open? Suddenly, you hear people scream behind you!
+[Turn around and see what is happening](Troll)
+[Run and hide](Troll attack)
+
+::Tomato plant
+Oh tomato plant seeds! Now you can plant them in your garden and get free tomatoes every year! Suddenly, you hear people scream behind you!
+[Turn around and see what is happening](Troll)
+[Run and hide](Troll attack)
+
+::Bad sword
+Oh. It was just a very bad sword. What could this possibly do? Suddenly, you hear people scream behind you!
+[Turn around and see what is happening](Troll)
+[Run and hide](Troll attack)
+
+::Troll
+A troll is attacking the village! It is so big! It ruins everything around! What should you do?
+[Run and hide](Hidden)
+[Attack the troll](Attacking the troll) <Points:-1>
+[Shout at the troll](Misunderstood troll)
+
+::Troll attack
+You run, knowing you do not want to deal with whatever happened. You manage to hide behind some barrels. There is a huge troll attacking the village! What should you do?
+[Keep hidden](Ohoh, it's coming closer!)
+[Attack the troll](Attacking the troll) <Points:-1>
+[Shout at the troll](Misunderstood troll)
+
+::Hidden
+You manage to hide behind some barrels. What should you do now?
+[Keep hidden](Ohoh, it's coming closer!)
+[Attack the troll](Attacking the troll) <Points:-1>
+[Shout at the troll](Misunderstood troll)
+
+::Ohoh, it's coming closer!
+The troll is raging! It's hitting and throwing things around. Oh no, it's coming closer to your hiding spot! What should you do?!
+[Attack the troll](Attacking the troll) <Points:-1>
+[Shout at the troll](Misunderstood troll)
+
+::Attacking the troll
+You lunge at the troll while it's back is turned from you. Where do you attack?
+[His long tail](Rage) <Health:-4>
+[His legs](Knocked out cold)
+
+::Misunderstood troll
+You shout to the troll, "Stop! Hey! Stop!!" and it stops! What should you say now?
+["Calm down, what's going on?"](Reason) <Points:5>
+["You f**** piece of f***, get out!"](Rage) <Health:-4> <Points:-1>
+
+::Rage
+The troll roars in rage, swinging it's tail around and hitting you. You fall back, and pick up a stone, aiming at it's head.
+[Throw the stone!](Knocked out cold)
+
+::Knocked out cold
+You knocked the troll out cold! Everyone in the village is praising you. What should you do now?
+[Get a few villagers to help you move the troll](Secure place)
+[Go about your day, go home](Home again)
+
+::Reason
+"Why are you attacking our village?" you ask. To your surprise, the troll answers, "I didn't mean to!". What do you say?
+["Then what is going on?"](The mountains)
+["I don't care if you didn't mean to. Get out of the village."](Crying troll) <Points:-2>
+
+::Secure place
+You and 10 other villagers manage to drag the troll to a place far away from the village. What now?
+[Wake the troll](Calm troll)
+[Leave it there and go home](Home again)
+
+::Crying troll
+The troll runs away crying. Everyone in the village is happy that the troll is gone, but you have a bad feeling. What now?
+[Go home](Home again)
+[Follow the troll](What is happening in the mountains?)
+
+::Calm troll
+The troll awakes. It seems it is calm. What should you do?
+[Ask the troll what's going on](The mountains)
+
+::The mountains
+"It is horrible," the troll says. "There has been these huge earthquakes in the mountains lately. I am terrified." The troll finishes. What do you say?
+["Is that why you attacked the village? Because you're afraid?"] (Yes)
+["It is no excuse for what you did."](Ashamed)
+
+::Ashamed
+"I am so sorry," the troll says with tears in it's eyes. "Can you please help me?" the troll asks. What do you say?
+["Fine. what should I do?"](Go to the mountains)
+["No. It's not my problem. Don't come back here ever again."](Go home)
+
+::Yes
+The troll tears up, "Yes. Oh, please. You seem like a brave and good person. Please help!" the troll says. What do you say?
+["Okay. What should I do?"](Go to the mountains)
+["No. It's not my problem. Don't come back here ever again."](Go home)
+
+::Go home
+You turn from the troll, and send home the other villagers.
+[Go home](Home again)
+
+::What is happening in the mountains?
+You follow the troll, and it's running to the mountains. Suddenly, you feel a huge earthquake! The troll runs away from the mountains What do you do?
+[Continue towards the mountains](A cave!)
+[Run home, this isn't worth it](Home again)
+
+::Go to the mountains
+You go to the mountains and there is an earthquake, just like the troll said! What do you do?
+[Continue](A cave!)
+[Run home, this isn't worth it](Home again)
+
+::A cave!
+In the mountains you see a huge cave. The earthquakes has stopped. Do you go inside the cave?
+[Yes](Door)
+[Oh hell no! Run home](Home again)
+
+::Door
+Inside, the cave is lit up by glowing mushrooms. There is a huge door there!
+[Try to open the door](Need a key)
+
+::Need a key
+The door didn't even budge! Did you buy the key at the shop earlier? Maybe that opens the door! What do you do?
+[Try and open the door](A trapped dragon!) <Points:-100>
+[Go back to the village to get the mysterious key!](Back to the village)
+
+::Back to the village
+You find the shop again. What do you do?
+[Buy the mysterious key - 20 gold](Back to the door) <Gold:-20> <Item:Mysterious key> <Points:100>
+[Give up. Too much work, go home.](Home again)
+[Oh no, you don't have enough gold! Go home and get the gold!](Home gold)
+
+::Home gold
+You run so fast to get home.
+[Grab the gold and run back](Back to the village) <Gold:20>
+[Give up, this is too much work](Home again)
+
+::Back to the village
+You're back at the shop, breathless.
+[Buy the mysterious key - 20 gold](Back to the door) <Gold:-20> <Item:Mysterious key> <Points:100>
+
+::Back to the door
+You bought the key and ran fast to the mountains and into the cave again. Here you are, at the door.
+[Try and open the door](A trapped dragon!) <Points:-100>
+
+::A trapped dragon!
+You manage to open the huge door with the mysterious key, and inside, there is a huge dragon! It flies out towards you, and you stumble back as it lands with its claws on your chest.
+[Shake it off](Too strong)
+[Wriggle out](Too strong)
+[Cry](Too strong)
+
+::Too strong
+The dragon is too strong. You can't do anything. It's hopeless! Suddenly, the dragon speaks, "Thank you". What do you say?
+["What?"](Let the dragon out)
+[Stare in shock](Let the dragon out)
+
+::Let the dragon out
+"I have been trapped in here for a week. Thank you for letting me out." the dragon says and goes off you. What do you do?
+[Tell the dragon, "You're welcome. Was it you that caused the earthquakes?"](Whoopsie, sorry)
+
+::Whoopsie, sorry
+"Oh," the dragon starts, "Well, it might have been me. I was trying so hard to get out!" the dragon laughs. "Thank you" the dragon says again, and flies off. What now?
+[Go home](Home again)
+[Find the troll](Thankful)
+
+::Thankful
+You find the troll hiding behind a rock outside the cave. What do you say?
+["Why are you hiding here? I thought you ran away"](Protective)
+["Well, problem solved!"](Thank you so much!) <Points:100>
+
+::Protective
+"I didn't want you to get hurt because of me." the troll says. What do you say?
+["Oh... That's nice. Well. Problem solved!"](Thank you so much!) <Points:100>
+
+::Thank you so much!
+The troll is super happy. It thanks you so much, and promises that if the village ever needs help with anything, they can always ask him.
+[Go home](Home again)
+
+::Home again
+You are finally home again. What a day. Such strange things that happened. Oh well. The end.

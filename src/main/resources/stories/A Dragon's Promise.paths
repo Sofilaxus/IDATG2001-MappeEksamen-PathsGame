@@ -1,0 +1,91 @@
+A Dragon's Promise
+
+::Beginnings
+You just woke up from a bad dream. You see from your bedroom window that it is still dark outside.
+[Go back to sleep](Sleep)
+[Wake up and see outside the window](Wake up)
+
+::Wake up
+You see a shadow move around in your garden. It appears something has broken in through your fence.
+[Go down and inspect](Shadow)
+[Go back to sleep](Sleep)
+
+::Shadow
+Once you are outside in your garden, the little shadow flies off with your tomatoes. Maybe it was just a big bird.
+[Go back in and sleep](Sleep)
+
+::Sleep
+You slept restlessly through the night. When you wake up, there is a knock on your door.
+[Answer the door](Stranger)
+
+::Stranger
+You open the door. There is a stranger there. He grabs your shoulders, looks you in the eyes and says, "You have to stay away from the village today!"
+[Who are you?](Crazy man)
+[Shake him off and slam the door in his face](Out of food)
+
+::Crazy man
+"It matters not who I am, child. Stay away from the village!" The stranger shouts and lets you go. He turns and leaves.
+[Stay in your house](Out of food)
+[Go to the village](Dragon attack)
+
+::Out of food
+You are hungry. In the kitchens, you notice you are out of food.
+[Go to the village](Dragon attack)
+
+::Dragon attack
+When you arrive in the village, there is a horde of small dragons stealing food and creating havoc in the village.
+[Go to one of the shops](Stealing your bread)
+[Defend the village](Follow the dragon)
+
+::Stealing your bread
+You get to a shop and manage to buy the last bread. When turning to leave, a little dragon steals your bread!
+[Follow the dragon](Follow the dragon)
+
+::Follow the dragon
+You follow a dragon with bread in its mouth. It takes you to the mountains.
+[Continue](Mother dragon)
+
+::Mother dragon
+You find courage in yourself to approach the dragon. Every dragon stops what they are doing and watches you as you approach. "Hello human," the enormous dragon speaks.
+[Say hello back](Introductions)
+
+::Introductions
+"What is your purpose here in these woods, Human?" The enormous dragon asks.
+[Why did you steal food from the village?](No food)
+[What is YOUR purpose here, Dragon?](No food)
+
+::No food
+The enormous dragon sighs and says, "My babies have just hatched and and they need food. There are many mouths to feed."
+[Why did you not just ask?](Scary humans)
+
+::Scary humans
+"The last villages we went to either chased us out with pitchforks, or hid everything and ran away from us", the enormous dragon answers.
+[Let us come to an agreement](Agreement)
+
+::Agreement
+You tell the dragon that you can speak with the villagers and come to an arrangement to make sure everyone gets food.
+[Ask the dragon what it can do for the village](Protector)
+
+::Protector
+The dragon says that it can protect the village from threats, heat up things, and carry heavy things.
+[Make agreement](The promise)
+[One more thing](Tomato thief)
+
+::Tomato thief
+You recall the big bird in your garden last night and asks the dragon if maybe it was one of her babies. The dragon confirms one of her babies came home with a few tomatoes last night.
+[Make the agreement](The promise)
+
+::The promise
+"Then, I hereby promise to protect, and help the village. For as long as my babies and I get food." The dragon declares.
+[Go back to the village](Back to the village)
+
+::Back to the village
+When you get back to the village, you explain to the villagers what happened in the mountain.
+[We have to kill them](A dragons wrath)
+[We can get a great advantage from them](A dragons promise)
+
+::A dragons wrath
+The next night, you and the villagers go to the mountain and kill the baby dragons. The mother dragon awakens and is furious. She takes a breath and incinerates the whole village, including you. You are dead. The end.
+
+::A dragons promise
+The next day, the dragons come. The villagers are afraid first, but the dragon kept the promise. When the villagers saw that the dragons did no harm, they fed them. Everyone is happy. The end.

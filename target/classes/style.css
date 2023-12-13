@@ -1,0 +1,159 @@
+#main-menu {
+    -fx-background-image: url("images/menuImage.PNG");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+#paths-title {
+    -fx-font-family: Luminari;
+    -fx-text-fill: WHITE;
+    -fx-font-size: 100;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
+#basic-background {
+    -fx-background-image: url("images/background.jpeg");
+    -fx-border-color: #353029;
+    -fx-border-width: 20;
+}
+
+#title-text {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 25px;
+}
+
+#sub-title-text {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 20px;
+}
+
+#box-style {
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-border-color: #353029;
+    -fx-border-width: 8;
+    -fx-border-radius: 15;
+    -fx-background-radius: 20;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+}
+
+#passage-box {
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-border-color: #353029;
+    -fx-border-width: 8;
+    -fx-border-radius: 15;
+    -fx-background-radius: 20;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+    -fx-wrap-text: true;
+    -fx-max-width: 450px;
+}
+
+#tutorial-text {
+    -fx-text-fill: WHITE;
+    -fx-background-color: #353029;
+    -fx-pref-width: 600;
+    -fx-border-color: #DBB148;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
+#normal-text {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+}
+
+#gold-icon {
+    -fx-background-image: url("images/gold.PNG");
+    -fx-fit-to-height: 20px;
+    -fx-fit-to-width: 20px;
+}
+
+#health-icon {
+    -fx-background-image: url("images/health.PNG");
+    -fx-fit-to-height: 20px;
+    -fx-fit-to-width: 20px;
+}
+
+#link-button {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 20;
+    -fx-text-fill: WHITE;
+    -fx-background-color: rgba(53,48,41);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #DBB148;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
+#link-button:hover {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 20;
+    -fx-text-fill: WHITE;
+    -fx-background-color: rgba(53,48,41,0.3);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #DBB148;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
+.table-view {
+    -fx-border-color: #353029;
+    -fx-border-width: 3;
+    -fx-border-radius: 3;
+    -fx-background-radius: 5;
+}
+
+.table-view .column-header-background .label{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+}
+
+.table-view .table-cell{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+}
+
+.list-view .column-header-background .label{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+}
+
+.list-view .list-cell{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+}
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-image: url("images/background.jpeg");
+    -fx-border-color: #353029;
+    -fx-border-width: 20;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.button {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 20;
+    -fx-text-fill: WHITE;
+    -fx-min-height: 50;
+    -fx-min-width: 160;
+    -fx-background-color: #353029;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #DBB148;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
+.button:hover {
+    -fx-background-color: #52493B;
+}
